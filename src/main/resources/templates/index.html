@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Spring Boot with Thymeleaf Example</title>
+<!-- Bootstrap CSS -->
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous" />
+	
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+	<div class="container">
+		<div th:insert="fragments/logo :: logo" class="logo"></div>
+		<div th:insert="fragments/menu :: menu" class="menu"></div>
+		<div th:insert="fragments/footer :: rodape"></div>
+	</div>
+</body>
+</html>

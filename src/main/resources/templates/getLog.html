@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Handling Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<body>
+	<div class="container">
+		<div th:insert="fragments/logo :: logo" class="logo"></div>
+		<div th:insert="fragments/menu :: menu" class="menu"></div>
+		<form th:action="@{/buscaLog}" th:object="${logResponse}"
+			method="post" id="formulario">
+			<div class="form-group" id="formInputs">
+				<label for="protocolo">Protocolo:</label>
+				<input type="text" class="form-control form-control-sm" id="protocolo" th:field="*{protocolo}" aria-describedby="protocolo" >
+				<br>
+				
+				
+				<button type="submit" class="btn btn-outline-success">
+					Buscar
+				</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
